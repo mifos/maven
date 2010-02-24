@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.mifos</groupId>
+    <artifactId>mifos-maven-plugins-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Mifos Maven Plugins - Parent</name>
+    <description>Meta-POM for Maven plugins used for building Mifos</description>
+
+    <modules>
+        <module>mifos-settings-sanitizer</module>
+        <module>mifos-pseudoloc-gen</module>
+        <module>serviceloader-maven-plugin</module>
+    </modules>
+
+    <!-- Only mention our repository, following "open source" guidance at
+         http://www.sonatype.com/people/2009/02/why-putting-repositories-in-your-poms-is-a-bad-idea/
+         "If you are exposing your source and want to make it easy for others
+         to build, then consider adding a repository entry to your POM..." -->
+    <repositories>
+        <repository>
+            <id>maven-repository.mifos.org</id>
+            <name>Mifos Maven Repository</name>
+            <url>http://maven.mifos.org/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven-repository.mifos.org</id>
+            <url>http://maven.mifos.org/nexus/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
