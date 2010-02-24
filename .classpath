@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="mifos-settings-sanitizer/target/classes" path="mifos-settings-sanitizer/src/main/java"/>
+	<classpathentry kind="src" output="mifos-settings-sanitizer/target/test-classes" path="mifos-settings-sanitizer/src/test/java"/>
+	<classpathentry kind="src" output="mifos-pseudoloc-gen/target/classes" path="mifos-pseudoloc-gen/src/main/java"/>
+	<classpathentry kind="src" output="mifos-pseudoloc-gen/target/test-classes" path="mifos-pseudoloc-gen/src/test/java"/>
+	<classpathentry kind="src" output="serviceloader-maven-plugin/target/classes" path="serviceloader-maven-plugin/src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER">
+		<accessrules>
+			<accessrule kind="nonaccessible" pattern="org.junit/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
