@@ -1,0 +1,34 @@
+( http://thread.gmane.org/gmane.comp.finance.mifos.devel/10671/focus=10673 )
+
+From: Adam Monsen
+Subject: Re: mifos-pseudoloc-gen
+Newsgroups: gmane.comp.finance.mifos.devel
+Date: 2011-01-07 18:32:24 GMT (23 minutes ago)
+
+> can anybody enlighten me what that mifos-pseudoloc-gen Maven plugin, and
+> the localizedResources, does?
+
+This Maven plugin filters the default message bundles, creating resource
+bundles for a "pseudolocale" useful for visual inspection of the Web UI
+for messages which are/aren't translatable. It's a dev/test tool.
+
+It takes messages like this from a default string bundle:
+
+  key=value
+
+and converts them to, for instance:
+
+  key=@@@value^^^
+
+to make them visually stand out as translatable. A hard-coded string
+will lack the prefix/suffix, letting a developer/tester know that code
+should be modified. Also, it will be clear which strings are
+cobbled-together or "lego" messages (something which impedes or prevents
+translation).
+
+The maven-pseudoloc-gen plugin is still used. There are only a few lines
+of code that do the actual work, see MifosPseudolocaleMojo.execute() for
+more information.
+
+See our 'pseudo' locale test server, listed on
+http://mifosforge.jira.com/wiki/display/MIFOS/Test+Servers
