@@ -37,14 +37,14 @@ import org.apache.maven.plugin.MojoExecutionException;
 /**
  * Translates strings into a "pseudo"-locale. Translatable strings will be munged to visually stand out, allowing easier
  * identification of untranslatable strings.
- * 
+ *
  * @goal pseudolocalize
  * @phase package
  */
 public class MifosPseudolocaleMojo extends AbstractMojo {
     /**
      * Directory where output files will be written.
-     * 
+     *
      * @parameter default-value="${project.build.directory}"
      * @required
      */
@@ -52,7 +52,7 @@ public class MifosPseudolocaleMojo extends AbstractMojo {
 
     /**
      * Directory where input files will be read.
-     * 
+     *
      * @parameter
      * @required
      */
@@ -60,7 +60,7 @@ public class MifosPseudolocaleMojo extends AbstractMojo {
 
     /**
      * Pattern for input filenames. Only files matching this pattern will be filtered.
-     * 
+     *
      * @parameter default-value="^[A-Za-z]+\.properties$"
      * @required
      */
@@ -68,7 +68,7 @@ public class MifosPseudolocaleMojo extends AbstractMojo {
 
     /**
      * Pseudolocale name.
-     * 
+     *
      * @parameter default-value="is_IS"
      * @required
      */
@@ -80,7 +80,7 @@ public class MifosPseudolocaleMojo extends AbstractMojo {
         buffer.append("^^^");
         return buffer.toString();
     }
-    
+
     protected String createOutputFilename(String inputFile) {
         return inputFile.replaceAll("(\\.properties)$", "_" + pseudolocale + "$1");
     }
