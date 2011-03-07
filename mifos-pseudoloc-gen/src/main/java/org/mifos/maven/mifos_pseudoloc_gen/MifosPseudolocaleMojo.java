@@ -138,7 +138,7 @@ public class MifosPseudolocaleMojo extends AbstractMojo {
                         // ignore
                     }
                 }
-                if (in != null) {
+                if (out != null) {
                     try {
                         out.close();
                     } catch (IOException e) {
