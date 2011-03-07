@@ -6,7 +6,13 @@
     <packaging>maven-plugin</packaging>
     <version>0.0.1</version>
     <name>mifos-settings-sanitizer Maven Mojo</name>
-    <url>http://maven.apache.org</url>
+    <url>http://mifos.org</url>
+    <parent>
+        <groupId>org.mifos</groupId>
+        <artifactId>mifos-maven-plugins-parent</artifactId>
+        <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
     <dependencies>
         <dependency>
             <groupId>org.apache.maven</groupId>
