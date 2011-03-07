@@ -7,6 +7,12 @@
     <version>1.0</version>
     <name>mifos-pseudoloc-gen Maven Mojo</name>
     <url>http://mifos.org</url>
+    <parent>
+        <groupId>org.mifos</groupId>
+        <artifactId>mifos-maven-plugins-parent</artifactId>
+        <version>1.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
     <dependencies>
         <dependency>
             <groupId>org.apache.maven</groupId>
